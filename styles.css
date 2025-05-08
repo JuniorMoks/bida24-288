@@ -1,11 +1,14 @@
-body{
-  background: #e6f7ff;
-}
-
-{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+hmtl, body{
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  background-color: #0d6efd;
 }
 
 html, body {
