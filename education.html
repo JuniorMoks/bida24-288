@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dive Education | Ocean Nomad</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Dive Education | Ocean Nomad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="bg-primary text-white text-center py-3">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-            <img src="image0.jpeg" alt="Ocean Nomad" style="height: 50px; margin-right: 15px;">
-            <h1 class="h3 mb-0">Ocean Nomad</h1>
-        </div>
-        
-        <nav>
+      <div class="d-flex align-items-center">
+        <img src="image0.jpeg" alt="Ocean Nomad" style="height: 50px; margin-right: 15px;">
+        <h1 class="h3 mb-0">Ocean Nomad</h1>
+      </div>
+      <nav>
         <ul class="nav justify-content-center">
           <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fas fa-home"></i> Home</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
@@ -28,19 +27,27 @@
   </header>
 
   <main class="container my-5">
-    <section>
-      <h2>Dive Education & Certification</h2>
-      <p>At Ocean Nomad, we help you learn the skills needed to explore the ocean safely and confidently. Going into the ocean can be a very scary experience for beginners, Ocean Nomad is here to assist everyone to get rid of the fear of the ocean and see its true beauty.</p>
-      <p>It starts with Open Water Diver certification, covering basics like equipment use, underwater communication, and emergency procedures. Advanced Open Water Diver introduces deep diving, navigation, and specialty skills like night diving. Rescue Diver training focuses on emergency response, while Divemaster and Instructor levels prepare divers for leadership roles. Courses combine theory (e.g., physics, physiology), confined water practice, and open-water dives. Continuous learning ensures safe, enjoyable diving. Ocean Nomad is here to help you get your certificate on any level you want!</p>
+    <section class="row">
+      <!-- Dive Education Left -->
+      <div class="col-md-6">
+        <h2>Dive Education</h2>
+        <p>At Ocean Nomad, we help you learn the skills needed to explore the ocean safely and confidently. Going into the ocean can be a very scary experience for beginners, Ocean Nomad is here to assist everyone to get rid of the fear of the ocean and see its true beauty.</p>
 
-      <ul class="bubble-list">
-        <li><span class="badge">1</span> Open Water Diver – Beginner certification to dive independently up to 18m.</li>
-        <li><span class="badge">2</span> Advanced Open Water Diver – Gain deeper diving skills up to 30m.</li>
-        <li><span class="badge">3</span> Rescue Diver – Learn how to manage emergencies underwater.</li>
-        <li><span class="badge">4</span> Divemaster – Professional level for guiding and assisting dive classes.</li>
-      </ul>
+        <p>It starts with learning essential diving theory — covering topics like equipment handling, pressure and depth, equalization, and underwater communication. Our instructors guide you through both theory and pool-based practice to ensure you’re comfortable before heading into the ocean.</p>
 
-      <p>We partner with recognized organizations like <strong>PADI</strong> and <strong>SSI</strong> to ensure quality training and global certification.</p>
+        <p>We partner with recognized organizations like <strong>PADI</strong> and <strong>SSI</strong> to ensure quality training and global certification.</p>
+      </div>
+
+      <!-- Certification Right -->
+      <div class="col-md-6">
+        <h2>Certification</h2>
+        <ul class="bubble-list">
+          <li><span class="badge">1</span> Open Water Diver – Beginner certification to dive independently up to 18m.</li>
+          <li><span class="badge">2</span> Advanced Open Water Diver – Gain deeper diving skills up to 30m.</li>
+          <li><span class="badge">3</span> Rescue Diver – Learn how to manage emergencies underwater.</li>
+          <li><span class="badge">4</span> Divemaster – Professional level for guiding and assisting dive classes.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="my-5">
@@ -97,10 +104,10 @@
   <script>
     const navLinks = document.querySelectorAll("nav ul li a");
     navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
-        });
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
