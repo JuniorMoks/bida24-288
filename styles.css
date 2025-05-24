@@ -5,12 +5,9 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
   background-color: #e6f7ff;
 }
 
@@ -19,7 +16,6 @@ body {
   font-size: 18px;
   color: #003049;
   line-height: 1.6;
-  flex: 1; /* Allows content to adjust dynamically */
 }
 
 h1, h2, h3, h4 {
@@ -45,12 +41,19 @@ header {
   padding: 20px;
   color: white;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+header h1 {
+  font-family: 'Garamond', serif;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0 0;
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -91,6 +94,7 @@ nav ul li a.active {
   text-align: center;
   color: white;
   position: relative;
+  z-index: 0;
 }
 
 .hero::before {
@@ -112,42 +116,39 @@ nav ul li a.active {
   border-radius: 10px;
 }
 
-/* Ensures content dynamically fits the screen */
-main {
-  flex: 1;
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Mobile adjustments for navigation layout */
-@media (max-width: 768px) {
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
-    gap: 10px;
-  }
-
-  nav ul li {
-    width: auto;
-  }
-
-  nav ul li a {
-    font-size: 12px;
-    padding: 6px;
-    display: block;
-  }
-}
-
-/* Footer stays anchored at the bottom */
 footer {
-  padding: 15px;
+  text-align: center;
+  padding: 20px;
   background-color: #0077b6;
   color: white;
-  text-align: center;
-  margin-top: auto;
-  width: 100%;
+}
+
+.bubble-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bubble-list li {
+  margin: 10px 0;
+  padding-left: 40px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.bubble-list .badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 #scrollTopBtn {
@@ -161,6 +162,7 @@ footer {
   background-color: #0077b6;
   color: white;
   border: none;
+  border-radius: 50%;
   transition: opacity 0.3s ease;
 }
 
@@ -168,9 +170,72 @@ footer {
   background-color: #005f8e;
 }
 
-/* Remove unwanted space below navigation */
-nav {
-  border-bottom: none !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+.price-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.price-card:hover {
+  transform: scale(1.05);
+}
+
+.price-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 119, 182, 0.8);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.price-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 19px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    text-align: left;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    padding: 6px;
+    display: block;
+  }
 }
