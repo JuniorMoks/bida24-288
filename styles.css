@@ -172,11 +172,10 @@ footer {
     margin-bottom: 0;
   }
 
-  /* Updated navigation layout for mobile */
   nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -187,8 +186,9 @@ footer {
   }
 
   nav ul li a {
-    font-size: 10px; /* Slightly smaller */
+    font-size: 10px;
     padding: 5px;
+    display: block;
   }
 }
 
@@ -210,7 +210,6 @@ footer {
   background-color: #005f8e;
 }
 
-/* Remove the white line below navigation */
 nav {
   border-bottom: none !important;
   margin-bottom: 0 !important;
