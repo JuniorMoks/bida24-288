@@ -172,22 +172,20 @@ footer {
     margin-bottom: 0;
   }
 
-  nav ul {
+nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   nav ul li {
-    width: 100%;
+    width: auto;
   }
 
   nav ul li a {
-    font-size: 10px;
-    padding: 5px;
+    font-size: 12px; 
+    padding: 6px;
     display: block;
   }
 }
