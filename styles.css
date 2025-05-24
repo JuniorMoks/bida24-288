@@ -148,34 +148,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 19px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  .hero-content {
-    padding: 15px;
-  }
-
-  footer {
-    margin-bottom: 0;
-  }
-
-nav ul {
+  nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 10px;
     text-align: left;
   }
 
@@ -184,10 +160,21 @@ nav ul {
   }
 
   nav ul li a {
-    font-size: 12px; 
+    font-size: 12px;
     padding: 6px;
     display: block;
   }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
 }
 
 #scrollTopBtn {
