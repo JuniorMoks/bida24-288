@@ -171,4 +171,22 @@ footer {
   footer {
     margin-bottom: 0;
   }
+  
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1100;
+  display: none;
+  padding: 12px 15px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #005f8e;
 }
