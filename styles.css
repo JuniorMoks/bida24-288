@@ -174,7 +174,7 @@ footer {
   
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -184,8 +184,8 @@ footer {
   }
 
   nav ul li a {
-    font-size: 14px;
-    padding: 8px;
+    font-size: 12px;
+    padding: 6px;
   }
 }
   
