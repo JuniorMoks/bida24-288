@@ -274,7 +274,7 @@ footer {
 }
 
 .flip-card-front img {
-  height: 400px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
   object-position: top;
