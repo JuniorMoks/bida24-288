@@ -5,10 +5,13 @@
 }
 
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: #e6f7ff;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -16,6 +19,7 @@ body {
   font-size: 18px;
   color: #003049;
   line-height: 1.6;
+  flex: 1;
 }
 
 h1, h2, h3, h4 {
@@ -41,10 +45,6 @@ header {
   padding: 20px;
   color: white;
   text-align: center;
-}
-
-header h1 {
-  font-family: 'Garamond', serif;
 }
 
 nav ul {
@@ -112,47 +112,17 @@ nav ul li a.active {
   border-radius: 10px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0077b6;
-  color: white;
+main {
+  flex: 1;
+  min-height: 70vh;
 }
 
-.bubble-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.bubble-list li {
-  margin: 10px 0;
-  padding-left: 40px;
-  position: relative;
-  line-height: 1.6;
-}
-
-.bubble-list .badge {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: red;
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
+/* Mobile adjustments for navigation layout */
 @media (max-width: 768px) {
   nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    text-align: left;
   }
 
   nav ul li {
@@ -166,15 +136,12 @@ footer {
   }
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-main {
-  flex-grow: 1;
+footer {
+  padding: 15px;
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  margin-top: auto;
 }
 
 #scrollTopBtn {
