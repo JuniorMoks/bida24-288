@@ -111,5 +111,20 @@
   <button id="scrollTopBtn" class="btn btn-primary rounded-circle shadow" title="Go to top">
   <i class="fas fa-arrow-up"></i>
 </button>
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  scrollBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
 </body>
 </html>
