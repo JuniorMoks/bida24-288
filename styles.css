@@ -82,40 +82,6 @@ nav ul li a.active {
   background-color: #00b4d8;
 }
 
-.hero {
-  height: 100vh;
-  background-image: url("scuba diving red sea🤿🌊🪸🐠.jfif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  z-index: 0;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-  background: rgba(0, 119, 182, 0.7);
-  border-radius: 10px;
-}
-
 footer {
   text-align: center;
   padding: 20px;
@@ -197,6 +163,41 @@ footer {
   object-fit: cover;
 }
 
+.video-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bgVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  background-color: rgba(0, 119, 182, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 19px;
@@ -214,7 +215,7 @@ footer {
     font-size: 1.3rem;
   }
 
-  .hero-content {
+  .hero-text {
     padding: 15px;
   }
 
