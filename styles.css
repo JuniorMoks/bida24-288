@@ -274,9 +274,10 @@ footer {
 }
 
 .flip-card-front img {
-  height: 180px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
+  object-position: top;
   border-radius: 8px;
 }
 
