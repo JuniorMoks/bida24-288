@@ -221,4 +221,21 @@ footer {
   footer {
     margin-bottom: 0;
   }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    text-align: left;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    padding: 6px;
+    display: block;
+  }
 }
