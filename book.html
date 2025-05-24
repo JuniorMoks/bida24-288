@@ -1,4 +1,38 @@
-<form id="bookingForm" class="mx-auto" style="max-width: 600px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Spot | Ocean Nomad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-3 sticky-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="image0.jpeg" alt="Ocean Nomad" style="height: 50px; margin-right: 15px;">
+        <h1 class="h3 mb-0">Ocean Nomad</h1>
+      </div>
+      <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="requirements.html">Requirements</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="prices.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <h2 class="text-center mb-4">Book Your <span id="courseName">Diving Course</span></h2>
+
+    <form id="bookingForm" class="mx-auto" style="max-width: 600px;">
   <div class="mb-3">
     <label class="form-label">Full Name</label>
     <input type="text" class="form-control" required>
@@ -42,3 +76,29 @@
 
   <button type="submit" class="btn btn-success w-100">Submit Payment</button>
 </form>
+    
+    <div id="confirmation" class="text-center text-success mt-5 hidden">
+      <h4>Thank you! Your payment went through.</h4>
+      <p>Receive your class schedules in your email.</p>
+    </div>
+  </main>
+
+  <footer class="text-center py-4 bg-primary text-white">
+    <p>&copy; 2025 Ocean Nomad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Display course from URL
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get('cert') || "Diving Course";
+    document.getElementById("courseName").textContent = course.replace(/([A-Z])/g, ' $1').trim();
+
+    // Handle form submission
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      this.classList.add("hidden");
+      document.getElementById("confirmation").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
