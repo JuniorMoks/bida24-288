@@ -171,11 +171,11 @@ footer {
   footer {
     margin-bottom: 0;
   }
-  
-@media (max-width: 768px) {
+
+  /* Updated navigation layout for mobile */
   nav ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -187,12 +187,11 @@ footer {
   }
 
   nav ul li a {
-    font-size: 12px;
-    padding: 6px;
+    font-size: 10px; /* Slightly smaller */
+    padding: 5px;
   }
 }
-  
-}
+
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
@@ -211,10 +210,9 @@ footer {
   background-color: #005f8e;
 }
 
+/* Remove the white line below navigation */
 nav {
   border-bottom: none !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-
-
