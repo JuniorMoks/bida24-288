@@ -172,6 +172,23 @@ footer {
     margin-bottom: 0;
   }
   
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+  
 }
 #scrollTopBtn {
   position: fixed;
@@ -190,3 +207,11 @@ footer {
 #scrollTopBtn:hover {
   background-color: #005f8e;
 }
+
+nav {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
